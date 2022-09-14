@@ -4,11 +4,11 @@ import os
 
 #Read check values
 file1 = open("rules/age.txt", "r")
-age_check = int(file1.read())
+age_check = int(file1.read(16))
 file1.close()
 
 file2 = open("rules/height.txt", "r")
-height_check = int(file2.read())
+height_check = int(file2.read(120))
 file2.close()
 
 running = True
@@ -27,7 +27,7 @@ while running:
         os.system('cls')
         print("Stap maar in!")
         print(coasterimg.get())
-        time.sleep(1)
+        time.sleep(3)
 
     else:
         os.system('cls')
