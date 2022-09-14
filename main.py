@@ -4,11 +4,11 @@ import os
 
 #Read check values
 file1 = open("rules/age.txt", "r")
-age_check = int(file1.read(16))
+age_check = int(file1.read())
 file1.close()
 
 file2 = open("rules/height.txt", "r")
-height_check = int(file2.read(120))
+height_check = int(file2.read())
 file2.close()
 
 running = True
@@ -17,8 +17,8 @@ while running:
     #Get inputs
     os.system('cls')
     print("Rollercoaster-check™")
-    age = input("Voer leeftijd in: ")
-    height = input("Voer lengte in: ")
+    age = input(16)
+    height = input(120)
     age = int(age)
     height = int(height)
 
@@ -33,7 +33,7 @@ while running:
         os.system('cls')
         print("Je voldoet niet aan de voorwaarden...")
         print(coasterimg.sad())
-        time.sleep(1)
+        time.sleep(3)
 
     result = input("Druk op Enter om nog een keer te checken, of X om te stoppen\n\n")
     if(result.upper() == "X"):
